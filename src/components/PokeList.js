@@ -10,8 +10,12 @@ class PokeList extends Component {
                     {pokemon.map((item, index) => {
                         return (
                             <li className="pokemon" key={index}>
-                                <img className="pokeimg" alt="" src={item.url}></img>
-                                <h2 className="pokeName">{item.name}</h2>
+                                <div className="container_pokeimg">
+                                    <img className="pokeimg" alt="" src={item.url}></img>
+                                </div>
+                                <div className="container_pokename">
+                                    <h2 className="pokename">{item.name}</h2>
+                                </div>
                                 <Pokemon item={item} />
                             </li>
                         );
